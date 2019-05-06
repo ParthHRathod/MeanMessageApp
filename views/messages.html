@@ -1,0 +1,28 @@
+<head>
+    <link rel="stylesheet" href="styles/messages.css" />
+</head>
+<body>
+    <h1>Messages</h1>
+    <div class="content">
+        <div ng-show="messages" class="msg" ng-repeat="msg in messages">
+            <a href="#/messages/{{$index}}">
+                <p>From: {{msg.sender}} </p>
+                <p>Message: {{msg.body}} </p>
+            </a>
+            <input type="button" value="Delete" class="deleteButton" ng-click="delete(msg)" />&emsp;&emsp;
+            <input type="checkbox" ng-model="msg.important" ng-click="important(msg)"/><br/>
+            ---------------------------------------------
+        </div>
+    </div>
+    <!-- <test-directive></test-directive> -->
+    <div ng-show="messages" class="compose">
+        <input type="button" value="Compose" id="composeButton" ng-click="compose()" /><br /><br />
+        <input type="text" aria-label="To:" ng-show="sendClick" placeholder="Whom to send?" ng-model="toUser" /><br /><br/>
+        <textarea type="text" placeholder="Remember! Be civil!" id="sendTextBox" ng-model="sendMsg" ng-show="sendClick"></textarea><br />
+        <input type="button" value="Send" id="sendButton" ng-click="send()" ng-show="sendClick" /><br /><br />
+    </div>
+
+    <div style="float:left;" class="errorClass" ng-show="errorMsg">
+        {{errorMsg}}
+    </div>
+</body>

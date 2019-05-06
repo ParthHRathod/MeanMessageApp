@@ -1,0 +1,60 @@
+h1 {
+    font-family: 'Dosis', sans-serif;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+
+a {
+    text-decoration: none; 
+    width: 50%;
+    color:black;
+    font-family: 'Dosis', sans-serif;
+}
+
+a p:last-child {
+    padding-bottom: 1%;
+}
+
+input {
+    font-family: 'Dosis', sans-serif;
+}
+
+p {
+    font-family: 'Dosis', sans-serif;
+    margin: 0px;
+    margin-left: 1%;
+}
+
+.content {
+    width: 35%;
+}
+
+.compose {
+    width: 60%;
+}
+
+.content, .compose {
+    float: left;
+}
+
+#composeButton, #sendButton, .deleteButton {
+    background-color: #718284;
+    color: white;
+    border: 2px solid #e7e7e7;
+    padding: 1.5% 12% 1.5% 3.5%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 1%;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#sendButton {
+    padding: 1.5% 7.5% 1.5% 2.5%;
+}
+
+#composeButton:hover, #sendButton:hover, .deleteButton:hover {
+    background-color: #617280;
+}

@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/details.css" />
+    </head>
+    <body>
+        <p style="padding-top:1%;">From: {{message.sender}}</p>
+        <p>Message: {{message.body}}</p>
+        
+        <input type="button" value="Back" id="backButton" ng-click="back()" />
+        <input type="button" value="Reply" id="replyButton" ng-click="reply()" /><br /><br /><br />
+        <textarea type="text" placeholder="Remember! Be civil!" id="replyTextBox" ng-model="replyMsg" ng-show="replyClick"></textarea><br />
+        <input type="button" value="Send" id="sendButton" ng-click="send()" ng-show="replyClick"/><br /><br />
+    </body>
+</html>

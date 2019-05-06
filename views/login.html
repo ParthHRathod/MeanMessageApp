@@ -1,0 +1,20 @@
+<body>
+    <link rel="stylesheet" href="styles/login.css" />
+    <center>
+        <br /><br />
+        <div>
+            Username: <input type="text" placeholder="username" ng-model="user.username" />
+        </div>
+        <br />
+        <div>
+            Password: <input type="password" placeholder="password" ng-model="user.password" />
+        </div>
+        <br />
+        <div>
+            <input type="button" id="loginButton" value="Login" ng-click="login()" />
+        </div>
+        <div class="errorClass" ng-show="errorMsg">
+            {{errorMsg}}
+        </div>
+    </center>
+</body>

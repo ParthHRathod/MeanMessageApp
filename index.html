@@ -1,0 +1,42 @@
+<!DOCTYPE html >
+<html>
+    <head>
+        <title>AngularJS Assessment</title>
+        <link rel="stylesheet" href="styles/style.css" />
+    </head>
+
+    <body>
+
+        <div ng-app = "myApp">
+            <div ng-controller = "navController">
+                <nav class="menu" ng-cloak>
+                    <ul>
+                        <li ng-hide="loggedIn">
+                            <a href="#/login">Login</a>
+                        </li>
+                        <li ng-hide="loggedIn">
+                            <a href="#/signup">Sign Up</a>
+                        </li>
+                        <li ng-show="loggedIn">
+                            <a href="#/home">Home</a>
+                        </li>
+                        <li ng-show="loggedIn">
+                            <a href="#/messages">Messages</a>
+                        </li>
+                        <li style="float: right;" ng-show="loggedIn">
+                            <a ng-click="logout()" href="#/login">Log Out</a>
+                        </li>
+                        <li>
+                            <!-- <a>{{loggedIn}}</a> -->
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="container" ng-view=""></div>
+        </div>
+
+        <script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.5.5/angular-route.min.js"></script>
+        <script src="scripts/script.js"></script>
+    </body>
+</html>

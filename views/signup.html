@@ -1,0 +1,54 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styles/signup.css" />
+</head>
+<body>
+    <div>
+        <div>
+            <br /><br />
+            <table id="form">
+                <tr>
+                    <td>Username</td>
+                    <td size="auto">:</td>
+                    <td colspan="3"><input required size="auto" type="text" placeholder="Enter your username" ng-model="newUser.username" /></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td size="auto">:</td>
+                    <td colspan="3"><input required size="auto" type="password" placeholder="Enter your password" ng-model="newUser.password" /></td>
+                </tr>
+                <tr>
+                    <td>First Name</td>
+                    <td size="auto">:</td>
+                    <td colspan="3"><input required size="auto" type="text" placeholder="Enter your first name" ng-model="newUser.firstname" /></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td size="auto">:</td>
+                    <td colspan="3"><input required size="auto" type="text" placeholder="Enter your last name" ng-model="newUser.lastname" /></td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td size="auto">:</td>
+                    <td colspan="3"><input required size="auto" type="text" placeholder="Enter your phone number" ng-model="newUser.phone" /></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td size="auto">:</td>
+                    <td><input required style="width:50%;" type="radio" name="gender" ng-model="newUser.gender" value="Male" />Male</td>
+                    <td><input required style="width:50%;" type="radio" name="gender" ng-model="newUser.gender" value="Female" />Female</td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td colspan="4"><input style="margin-left: 40%;" type="button" value="Sign Up" id="registerButton" ng-click="register()" /></td>
+                </tr>
+            </table>
+            <br /><br />
+        </div>
+        <div class="errorClass" ng-show="errorMsg">
+            {{errorMsg}}
+        </div>
+    </div>
+</body>
+</html>

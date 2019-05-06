@@ -1,0 +1,50 @@
+body {
+    font-family: "Dosis", sans-serif;
+    padding-left: 1%;
+}
+
+#replyButton, #sendButton, #backButton {
+    background-color: #718284;
+    color: white;
+    border: 2px solid #e7e7e7;
+    padding: 0.5% 1%;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 1%;
+    text-align: center;
+    display: inline-block;
+    width: 6%;
+    font-size: 16px;
+    border-radius: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#backButton, #replyButton {
+    float: left;
+}
+
+#backButton {
+    margin-right: 5%;
+}
+
+#replyButton:hover, #sendButton:hover {
+    background-color: #617280;
+}
+
+#replyTextBox {
+    margin-left: 1%; 
+    resize: auto; 
+    overflow: hidden;
+}
+
+input {
+    font-family: 'Dosis', sans-serif;
+    font-size: 16px;
+    width: 100%;
+}
+
+p {
+    font-family: "Dosis", sans-serif;
+    margin-left: 1%;
+}
