@@ -70,7 +70,12 @@ app.controller('signupController', function($scope, $rootScope, $window, $locati
 
         $http.post('http://localhost:3000/api/auth/register', newUser)
         .then((resp) => {
-            $location.path(['/login']);
+            if (resp.data.isLoggedIn) {
+                $window.localStorage.setItem('token', resp.data.token);
+                $window.localStorage.setItem('loggedInUser', newUser.username);
+                $rootScope.loggedIn = true;
+                $location.path(['/home']);
+            }
         })
         .catch((err) => {
             $scope.errorMsg = (err.data);
@@ -93,7 +98,7 @@ app.controller('loginController', function ($scope, $rootScope, $window, $locati
                 $window.localStorage.setItem('loggedInUser', user.username);
                 $rootScope.loggedIn = true;
                 $location.path(['/home']);
-            }            
+            }
         })
         .catch((err) => {
         $scope.errorMsg = (err.data.message);

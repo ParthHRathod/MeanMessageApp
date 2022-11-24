@@ -1,7 +1,7 @@
 {
     "development": {
         "PORT": 3000,
-        "MONGODB_URI": "mongodb://localhost:27017/messageApp",
+        "MONGODB_URI": "mongodb://127.0.0.1:27017/messageApp",
         "JWT_SECRET": "PARTH_SECRET#1193"
     },
     "production": {

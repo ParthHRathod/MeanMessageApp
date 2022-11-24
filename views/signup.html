@@ -46,8 +46,8 @@
             </table>
             <br /><br />
         </div>
-        <div class="errorClass" ng-show="errorMsg">
-            {{errorMsg}}
+        <div class="errorClass" style="color: red;" ng-show="errorMsg">
+            <p ng-repeat="msg in errorMsg track by $index">{{msg}}</p>
         </div>
     </div>
 </body>

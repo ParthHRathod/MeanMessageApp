@@ -9,7 +9,16 @@ Router.post('/register', async (req, res, next) => {
     
     try {
         const result = await userDoc.save();
-        res.send(result);
+        // res.send(result);
+        var token = jwt.sign({
+            _id: result._id,
+        }, process.env.JWT_SECRET, {
+            expiresIn: "1h"
+        });
+        res.send({
+            isLoggedIn: true,
+            token: token
+        });
     } catch (ex) {
         if(ex.code === 11000)
             res.status(422).send(['User already exists.']);

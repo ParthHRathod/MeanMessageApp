@@ -33,8 +33,13 @@ Router.post('/sendMessage', async (req, res, next) => {
     const msgDoc = msg(req.body);
 
     try {
-        const result = await msgDoc.save();
-        res.send(result);
+        const receiver = await user.find({username: req.body.receiver});
+        if (receiver.length) {
+            const result = await msgDoc.save();
+            res.send(result);
+        } else {
+            throw 'No such user found.';
+        }
     } catch (ex) {
         res.status(422).send(ex);
     }
